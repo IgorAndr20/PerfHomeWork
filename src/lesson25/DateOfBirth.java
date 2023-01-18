@@ -33,7 +33,7 @@ public class DateOfBirth {
 
         long start2 = System.nanoTime();
         Calendar dateOfBirth2 = new GregorianCalendar(1991, 7, 20);
-        System.out.println("Calendar " + dateOfBirth2.getTime());
+        System.out.println("Calendar " + "\n" + dateOfBirth2.getTime());
         System.out.println(new SimpleDateFormat("HH-mm dd-MM-yyyy").format(dateOfBirth2.getTime()));
         System.out.println(new SimpleDateFormat("dd-MMMM-yy").format(dateOfBirth2.getTime()));
         System.out.println(new SimpleDateFormat("dd-MMMM-yyyy").format(dateOfBirth2.getTime()));
@@ -49,7 +49,7 @@ public class DateOfBirth {
 
         long start3 = System.nanoTime();
         LocalDate dateOfBirth3 = LocalDate.of(1991, 8, 20);
-        System.out.println("LocalDate " + dateOfBirth3);
+        System.out.println("LocalDate " + "\n" + dateOfBirth3);
         System.out.println(DateTimeFormatter.ofPattern("yyyy-MMMM-dd").format(dateOfBirth3));
         System.out.println(DateTimeFormatter.BASIC_ISO_DATE.format(dateOfBirth3));
         System.out.println(DateTimeFormatter.ofLocalizedDate(FormatStyle.LONG).format(dateOfBirth3));
@@ -64,7 +64,7 @@ public class DateOfBirth {
 
         long start4 = System.nanoTime();
         LocalDateTime dateOfBirth4 = LocalDateTime.of(1991, 8, 20, 0, 0);
-        System.out.println("LocalDateTime " + dateOfBirth4);
+        System.out.println("LocalDateTime " + "\n" + dateOfBirth4);
         System.out.println(DateTimeFormatter.ofPattern("HH-mm dd-MM-yyyy").format(dateOfBirth4));
         System.out.println(DateTimeFormatter.BASIC_ISO_DATE.format(dateOfBirth4));
         System.out.println(DateTimeFormatter.ofLocalizedDate(FormatStyle.LONG).format(dateOfBirth4));
@@ -80,7 +80,7 @@ public class DateOfBirth {
 
         long start5 = System.nanoTime();
         ZonedDateTime dateOfBirth5 = ZonedDateTime.of(1991, 8, 20, 0, 0, 0, 0, ZoneId.of("Asia/Baku"));
-        System.out.println("ZoneDateTime " + dateOfBirth5);
+        System.out.println("ZoneDateTime " + "\n" + dateOfBirth5);
         System.out.println(DateTimeFormatter.ofPattern("HH-mm dd-MM-yyyy").format(dateOfBirth5));
         System.out.println(DateTimeFormatter.ISO_OFFSET_DATE_TIME.format(dateOfBirth5));
         System.out.println(DateTimeFormatter.ISO_OFFSET_DATE.format(dateOfBirth5));
