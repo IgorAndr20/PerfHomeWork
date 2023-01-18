@@ -56,8 +56,8 @@ public class DateOfBirth {
         System.out.println(DateTimeFormatter.ISO_LOCAL_DATE.format(dateOfBirth3));
         System.out.println(DateTimeFormatter.ofLocalizedDate(FormatStyle.SHORT).format(dateOfBirth3));
         LocalDate currentDate3 = LocalDate.now();
-        Period period3 = Period.between(currentDate3, dateOfBirth3);
-        System.out.println("Разница дат " + period3);
+        Period diff3 = Period.between(currentDate3, dateOfBirth3);
+        System.out.println("Разница дат " + diff3);
         long finish3 = System.nanoTime();
         long elapsed3 = (finish3 - start3) / 1000;
         System.out.println("Время выполнения LocalDate - " + elapsed3 + " ms" + "\n");
@@ -71,8 +71,8 @@ public class DateOfBirth {
         System.out.println(DateTimeFormatter.ISO_LOCAL_DATE.format(dateOfBirth4));
         System.out.println(DateTimeFormatter.ofLocalizedDate(FormatStyle.SHORT).format(dateOfBirth4));
         LocalDateTime currentDate4 = LocalDateTime.now();
-        long period4 = ChronoUnit.DAYS.between(currentDate4, dateOfBirth4);
-        System.out.println("Разница дат " + period4 + " суток");
+        long diff4 = ChronoUnit.DAYS.between(currentDate4, dateOfBirth4);
+        System.out.println("Разница дат " + diff4 + " суток");
         long finish4 = System.nanoTime();
         long elapsed4 = (finish4 - start4) / 1000;
         System.out.println("LocalDateTime - " + elapsed4 + " ms" + "\n");
@@ -87,8 +87,8 @@ public class DateOfBirth {
         System.out.println(DateTimeFormatter.RFC_1123_DATE_TIME.format(dateOfBirth5));
         System.out.println(DateTimeFormatter.ISO_OFFSET_TIME.format(dateOfBirth5));
         ZonedDateTime currentDate5 = ZonedDateTime.now();
-        long period5 = ChronoUnit.DAYS.between(currentDate5, dateOfBirth5);
-        System.out.println("Разница дат " + period5 + " суток");
+        long diff5 = ChronoUnit.DAYS.between(currentDate5, dateOfBirth5);
+        System.out.println("Разница дат " + diff5 + " суток");
         long finish5 = System.nanoTime();
         long elapsed5 = (finish5 - start5) / 1000;
         System.out.println("ZonedDateTime - " + elapsed5 + " ms" + "\n");
