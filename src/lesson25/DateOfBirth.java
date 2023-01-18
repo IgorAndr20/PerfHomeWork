@@ -57,7 +57,7 @@ public class DateOfBirth {
         System.out.println(DateTimeFormatter.ofLocalizedDate(FormatStyle.SHORT).format(dateOfBirth3));
         LocalDate currentDate3 = LocalDate.now();
         Period period3 = Period.between(currentDate3, dateOfBirth3);
-        System.out.println("Разница дат " + period3 + " суток");
+        System.out.println("Разница дат " + period3);
         long finish3 = System.nanoTime();
         long elapsed3 = (finish3 - start3) / 1000;
         System.out.println("Время выполнения LocalDate - " + elapsed3 + " ms" + "\n");
