@@ -2,10 +2,13 @@ package lesson39;
 
 
 public class Animal {
-    static String planet = "Земля";
+    public static String planet = "Земля";
 
-    static void testStaticMethod() {
+    public static void testStaticMethod() {
         System.out.println("Это статическое животное");
     }
-
+    public static String getPlanet() {
+        return planet;
+    }
 }
+

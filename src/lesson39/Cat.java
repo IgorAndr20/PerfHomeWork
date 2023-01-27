@@ -3,33 +3,43 @@ package lesson39;
 import static lesson39.Animal.*;
 
 public class Cat extends Animal {
-    int age;
-    String eyecolour;
-    int weight;
-    String furcolour;
+    private String age;
+    private String eyecolour;
+    private String weight;
+    private String furcolour;
 
     public Cat() {
+        this.age = "Неизвестно";
+        this.eyecolour = "Неизвестно";
+        this.weight = "Неизвестно";
+        this.furcolour = "Неизвестно";
     }
 
     public Cat(int age) {
-        this.age = age;
+        this.age = String.valueOf(age);
+        this.eyecolour = "Неизвестно";
+        this.weight = "Неизвестно";
+        this.furcolour = "Неизвестно";
     }
 
     public Cat(int age, String eyecolour) {
-        this.age = age;
+        this.age = String.valueOf(age);
         this.eyecolour = eyecolour;
+        this.weight = "Неизвестно";
+        this.furcolour = "Неизвестно";
     }
 
     public Cat(int age, String eyecolour, int weight) {
-        this.age = age;
+        this.age = String.valueOf(age);
         this.eyecolour = eyecolour;
-        this.weight = weight;
+        this.weight = String.valueOf(weight);
+        this.furcolour = "Неизвестно";
     }
 
     public Cat(int age, String eyecolour, int weight, String furcolour) {
-        this.age = age;
+        this.age = String.valueOf(age);
         this.eyecolour = eyecolour;
-        this.weight = weight;
+        this.weight = String.valueOf(weight);
         this.furcolour = furcolour;
     }
 
@@ -40,6 +50,7 @@ public class Cat extends Animal {
                 "Цвет глаз = " + eyecolour + "\n" +
                 "Вес, кг = " + weight + "\n" +
                 "Цвет шерсти = " + furcolour + "\n";
+
     }
 
     public static void main(String[] args) {
@@ -53,6 +64,6 @@ public class Cat extends Animal {
         testStaticMethod();
         System.out.println(planet);
         planet = "Луна";
-        System.out.println(new Cat() + planet);
+        System.out.println(new Cat().getPlanet());
     }
 }
