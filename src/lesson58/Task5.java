@@ -5,14 +5,12 @@ import java.util.Random;
 import java.util.StringJoiner;
 
 public class Task5 {
-    private static int x;
     private static int y;
 
     public static void main(String[] args) {
-        x = new Random().nextInt(7) + 1;
         y = new Random().nextInt(5) + 1;
         Task5 output = new Task5();
-        int array[][] = new int[y][x];
+        int array[][] = new int[y][];
         output.createArray(array);
         output.sortArray(array);
         StringJoiner sj = new StringJoiner(System.lineSeparator());
@@ -24,6 +22,7 @@ public class Task5 {
     }
     public void createArray(int[][] array) {
         for (int j = 0; j < array.length; j++) {
+            array[j] = new int[new Random().nextInt(7) + 1];
             for (int i = 0; i < array[j].length; i++) {
                 int t = new Random().nextInt(19) - 9;
                 array[j][i] = t;
